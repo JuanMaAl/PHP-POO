@@ -29,7 +29,7 @@ class Usuario{
     //__set Metodo magico
     public function __set($propiedad, $valor){
         if (property_exists($this, $propiedad)){
-            $this->propiedad = $valor;
+            $this->$propiedad = $valor;
         }
         return $this;
     }
