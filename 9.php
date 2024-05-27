@@ -21,10 +21,10 @@
     echo '<br><br>';
 
     // Usar instancia de PDO para un select * from con where
-    $rol = 'captain';
+    $rol = 'capitan';
     $sql='SELECT * FROM usuarios WHERE rol = :rol';
     $stmt= $dbh->prepare($sql);
-    $stmt->execute(['rol' => $roll]);
+    $stmt->execute(['rol' => $rol]);
     $usuarios = $stmt->fetchAll();
 
     echo 'Usuarios rol capitan <br><br>';
