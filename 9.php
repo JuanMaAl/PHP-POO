@@ -1,6 +1,6 @@
 <?php  
     // Variables de conexión a la BD
-    $host='localhost';
+    $host='127.0.0.1';
     $usuario='root';
     $password='';
     $dbname= 'pdo';
@@ -8,7 +8,7 @@
     $dsn = 'mysql:host='.$host.';dbname='.$dbname;
     // Creamos una instancia de PDO. DBH significa Database Handel
     $dbh = new PDO($dsn, $usuario, $password);
-    $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FECTH_OBJ);
+    $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
     // Usar instancia de PDO para un select * from
     $sql = 'SELECT * FROM usuarios';
     $stmt = $dbh->prepare($sql);
